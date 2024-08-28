@@ -1,0 +1,48 @@
+package Mastery;
+
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import Operator.DataBaseConnection;
+import Operator.Executer;
+
+public class MasteryUpdate
+{
+	public void init(String sqlStatement, String widgetUrl, String JSONfile)
+	{
+		DataBaseConnection con = new DataBaseConnection();
+		ResultSet rs = con.execute(sqlStatement);
+		
+		JSONFileWriteMastery jsonFileWrite = new JSONFileWriteMastery();
+		
+		try
+		{
+			//Creates JSON file with result set
+			jsonFileWrite.createJsonFile(rs, JSONfile);
+		}
+		catch (IOException e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				rs.close();
+			}
+			catch (SQLException e)
+			{
+				e.printStackTrace();
+				System.out.println(e);
+			}
+		}
+		
+		//creates and executes the curl command
+		Executer executer = new Executer();
+		String command = executer.createCommand(widgetUrl, JSONfile);
+		System.out.println(command);
+		executer.execute(command);
+	}
+}

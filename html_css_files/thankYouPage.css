@@ -1,0 +1,24 @@
+.thanks
+{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 1500px;
+	height: 850px;
+}
+
+.thanks > #ty
+{
+	font-family: Georgia Bold;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+.thanks > #sub
+{
+	font-family: Georgia;
+	font-size: 75px;
+}

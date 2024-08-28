@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:8585/#landing -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="assets.css">
+		<link rel="icon" href="Ericsson_Logo_Blue.png">
+		<title>Survey Polling Tool</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<body>
+		<link rel="stylesheet" type="text/css" href="surveyStylesheet.css">
+		
+		<div class="eaContainer-SystemBarHolder">
+			<div class="eaContainer-SystemBar">
+				<div class="eaContainer-SystemBar-left">
+					<a tabindex="-1" class="eaContainer-SystemBar-logoAnchor"><div class="eaContainer-SystemBar-logo"></div></a>
+					<div class="eaContainer-SystemBar-name"><a tabindex="-1" class="eaContainer-SystemBar-nameValue">Survey Polling Tool</a></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="eaContainer-applicationHolder">
+			<div class="form-style-10">
+				<h1><img src="Ericsson_Logo.png" alt="Ericsson" style="width:35px;height:40px;">Team Happiness Survey</h1>
+				<div style="clear: both;"></div>
+				
+				<form action="teamHappiness.php" method="post" form="teamform">
+					<div class="section"><span>1</span>DE Team:<font color="#FF0000">*</font></div>
+					<div class="inner-wrap">
+						<label>
+							<input type="radio" id="team" value="Axis" name="team">DE Axis<br>
+							<input type="radio" id="team" value="Stratus" name="team">DE Stratus<br>
+						</label>
+					</div>
+					
+					<div class="section"><span>2</span>My Team have a clear purpose:<font color="#FF0000">*</font></div>
+					<div class="inner-wrap">
+						<label class="rating">
+							<input type="radio" id="mission" value="1" name="mission">Strongly Disagree<br>
+							<input type="radio" id="mission" value="2" name="mission">Disagree<br>
+							<input type="radio" id="mission" value="3" name="mission">Neither Agree nor Disagree<br>
+							<input type="radio" id="mission" value="4" name="mission">Agree<br>
+							<input type="radio" id="mission" value="5" name="mission">Strongly Agree<br>
+						</label>
+						<label class="comment">
+							<label for="missionC">Please leave a comment: </label>
+							<textarea id="missionC" name="missionC" style="width: 500px; height: 125px; font-size: 16px;" maxlength="150"></textarea>
+							<label for="missionC" font-size="4">(Max 150 Characters)</label>
+						</label>
+						<div style="clear: both;"></div>
+					</div>
+					
+					<div class="section"><span>3</span>I am building up Mastery:<font color="#FF0000">*</font></div>
+					<div class="inner-wrap">
+						<label class="rating">
+							<input type="radio" id="mastery" value="1" name="mastery">Strongly Disagree<br>
+							<input type="radio" id="mastery" value="2" name="mastery">Disagree<br>
+							<input type="radio" id="mastery" value="3" name="mastery">Neither Agree nor Disagree<br>
+							<input type="radio" id="mastery" value="4" name="mastery">Agree<br>
+							<input type="radio" id="mastery" value="5" name="mastery">Strongly Agree<br>
+						</label>
+						<label class="comment">
+							<label for="masteryC">Please leave a comment: </label>
+							<textarea id="masteryC" name="masteryC" style="width: 500px; height: 125px; font-size: 16px;" maxlength="150"></textarea>
+							<label for="masteryC" font-size="4">(Max 150 Characters)</label>
+						</label>
+						<div style="clear: both;"></div>
+					</div>
+					
+					<div class="section"><span>4</span>Is the Organization supporting me to achieve my goals?<font color="#FF0000">*</font></div>
+					<div class="inner-wrap">
+						<label class="rating">
+							<input type="radio" id="organization" value="1" name="organization">Strongly Disagree<br>
+							<input type="radio" id="organization" value="2" name="organization">Disagree<br>
+							<input type="radio" id="organization" value="3" name="organization">Neither Agree nor Disagree<br>
+							<input type="radio" id="organization" value="4" name="organization">Agree<br>
+							<input type="radio" id="organization" value="5" name="organization">Strongly Agree<br>
+						</label>
+						<label class="comment">
+							<label for="organizationC">Please leave a comment: </label>
+							<textarea id="organizationC" name="organizationC" style="width: 500px; height: 125px; font-size: 16px;" maxlength="150"></textarea>
+							<label for="organizationC" font-size="4">(Max 150 Characters)</label>
+						</label>
+						<div style="clear: both;"></div>
+					</div>
+					
+					<div class="section"><span>5</span>I feel empowered to do the right thing:<font color="#FF0000">*</font></div>
+					<div class="inner-wrap">
+						<label class="rating">
+							<input type="radio" id="empowered" value="1" name="empowered">Strongly Disagree<br>
+							<input type="radio" id="empowered" value="2" name="empowered">Disagree<br>
+							<input type="radio" id="empowered" value="3" name="empowered">Neither Agree nor Disagree<br>
+							<input type="radio" id="empowered" value="4" name="empowered">Agree<br>
+							<input type="radio" id="empowered" value="5" name="empowered">Strongly Agree<br>
+						</label>
+						<label class="comment">
+							<label for="empoweredC">Please leave a comment: </label>
+							<textarea id="empoweredC" name="empoweredC" style="width: 500px; height: 125px; font-size: 16px;" maxlength="150"></textarea>
+							<label for="empoweredC" font-size="4">(Max 150 Characters)</label>
+						</label>
+						<div style="clear: both;"></div>
+					</div>
+					
+					<div class="button-section">
+						<input type="submit" value="Submit" name="btnSubmit">&nbsp;&nbsp;
+						<input type="reset" value="Reset" name="btnReset">
+						
+						<span class="answer-required">
+							<font color="#FF0000"><strong>*</strong></font> = Answer Required
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
